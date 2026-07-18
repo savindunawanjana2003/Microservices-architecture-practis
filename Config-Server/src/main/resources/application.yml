@@ -1,0 +1,14 @@
+server:
+  port: 8089
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          # ඔයාගේ properties files තියෙන folder එකේ path එක මෙතනට දෙන්න
+          search-locations: classpath:/config
