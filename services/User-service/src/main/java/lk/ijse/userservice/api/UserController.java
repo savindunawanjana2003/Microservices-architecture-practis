@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-
 @RestController
 @RequestMapping("api/v1/user")
 @RequiredArgsConstructor
@@ -18,14 +17,31 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("save")
-    public ResponseEntity<?> save(@RequestBody UserDTO userDTO){
+    public ResponseEntity<?> save(@RequestBody UserDTO userDTO) {
         try {
             return ResponseEntity.ok(userService.saveUser(userDTO));
-        }catch (Exception e){
+        } catch (Exception e) {
             System.err.println(e.getMessage());
             ResponseEntity<Exception> body = ResponseEntity.badRequest().body(e);
             System.out.println(body);
             return ResponseEntity.internalServerError().build();
         }
     }
+
+
+    @PostMapping("validate")
+    public ResponseEntity<?> validate(@RequestBody UserDTO userDTO) {
+        try {
+            return ResponseEntity.ok(userService.getUserByEmail(userDTO.getEmail()));
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+            ResponseEntity<Exception> body = ResponseEntity.badRequest().body(e);
+            System.out.println(body);
+            return ResponseEntity.internalServerError().build();
+        }
+    }
+
+
+//
+
 }

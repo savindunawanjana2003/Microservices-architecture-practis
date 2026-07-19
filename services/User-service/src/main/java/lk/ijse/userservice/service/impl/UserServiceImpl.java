@@ -1,6 +1,7 @@
 package lk.ijse.userservice.service.impl;
 
 import lk.ijse.userservice.dto.UserDTO;
+import lk.ijse.userservice.entity.User;
 import lk.ijse.userservice.exception.DuplicateException;
 import lk.ijse.userservice.repo.UserRepo;
 import lk.ijse.userservice.service.UserService;
@@ -20,6 +21,22 @@ public class UserServiceImpl implements UserService {
         if (userRepo.findById(userDTO.getId()).isPresent())
             throw new DuplicateException("Duplicate User Id");
         return convertor.getUserDTO(userRepo.save(convertor.getUser(userDTO)));
+    }
+
+    @Override
+    public String getUserByEmail(String email) {
+
+        lk.ijse.userservice.entity.User user = (User) userRepo.findByEmail(email);
+        System.out.println("user-------------> " + user);
+
+        if (user.getEmail() == null || user.getEmail().equals("")) {
+
+            return "401";
+
+        } else {
+
+            return "200";
+        }
     }
 
 }

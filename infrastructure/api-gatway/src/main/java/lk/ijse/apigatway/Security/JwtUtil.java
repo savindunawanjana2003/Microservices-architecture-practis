@@ -1,32 +1,30 @@
 package lk.ijse.apigatway.Security;
 
 
-import com.netflix.eureka.registry.Key;
-import org.bouncycastle.jcajce.BCFKSLoadStoreParameter;
-import org.springframework.stereotype.Component;
-
-import java.util.Date;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.stereotype.Component;
 
+import java.security.Key;
+import java.util.Date;
 
 
 @Component
 public class JwtUtil {
-    private final Key key = Keys.secretKeyFor(BCFKSLoadStoreParameter.SignatureAlgorithm.HS256);
 
-    public String generateToken(String username) {
+        private final Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
+    public String generateToken(String email) {
         return Jwts.builder()
-                .setSubject(username)
+                .setSubject(email)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + 3600000)) // 1 hour
                 .signWith(key)
                 .compact();
     }
 
-    public String validateAndGetUsername(String token) {
+    public String validateAndGetUserEmail(String token) {
         return Jwts.parserBuilder()
                 .setSigningKey(key)
                 .build()
@@ -35,3 +33,4 @@ public class JwtUtil {
                 .getSubject();
     }
 }
+
