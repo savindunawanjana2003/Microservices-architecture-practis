@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     private final UserService userService;
 
-    @PostMapping
+    @PostMapping("save")
     public ResponseEntity<?> save(@RequestBody UserDTO userDTO){
         try {
             return ResponseEntity.ok(userService.saveUser(userDTO));
