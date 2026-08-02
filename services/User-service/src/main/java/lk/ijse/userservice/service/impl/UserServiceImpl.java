@@ -9,6 +9,8 @@ import lk.ijse.userservice.util.DataTypeConvertor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 
 @Service
 @RequiredArgsConstructor
@@ -26,10 +28,17 @@ public class UserServiceImpl implements UserService {
     @Override
     public String getUserByEmail(String email) {
 
-        lk.ijse.userservice.entity.User user = (User) userRepo.findByEmail(email);
+        Optional<User> user = userRepo.findByEmail(email);
+
+        if (user.isEmpty()) {
+
+            return "500";
+        }
+
+        User user1 = user.get();
         System.out.println("user-------------> " + user);
 
-        if (user.getEmail() == null || user.getEmail().equals("")) {
+        if (user1.getEmail() == null || user1.getEmail().equals("")) {
 
             return "401";
 

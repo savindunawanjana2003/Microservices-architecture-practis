@@ -28,9 +28,10 @@ public class UserController {
         }
     }
 
-
     @PostMapping("validate")
     public ResponseEntity<?> validate(@RequestBody UserDTO userDTO) {
+
+        System.out.println(" ////"+ userDTO);
         try {
             return ResponseEntity.ok(userService.getUserByEmail(userDTO.getEmail()));
         } catch (Exception e) {

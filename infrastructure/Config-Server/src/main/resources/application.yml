@@ -5,31 +5,18 @@ spring:
   application:
     name: config-server
   profiles:
-    active: native
-  cloud:
-    config:
-      server:
-        native:
-          # ඔයාගේ properties files තියෙන folder එකේ path එක මෙතනට දෙන්න
-          search-locations: file:../config-repo
-#          classpath:/config-repo
-
-
-
-
-server:
-  port: 8089
-
-spring:
-  application:
-    name: config-server
+    active: git
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/ManuthLakdiw/AGMS-microservice
+          uri: https://github.com/savindunawanjana2003/Microservices-architecture-practis.git
           search-paths: config-repo
           clone-on-start: true
+          # Private Repo එකක් නිසා authentication අනිවාර්යයෙන්ම ඕනේ:
+          username: savindunawanjana2003
+          password: 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
+          # Security වලට හොඳම ක්‍රමය Environment Variable එකක් දාන එක. (නැත්නම් direct token එක මෙතනට පේස්ට් කරන්න)
 
 eureka:
   client:
@@ -39,4 +26,3 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
-
