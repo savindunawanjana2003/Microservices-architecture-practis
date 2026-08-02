@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 @RequestMapping("api/v1/user")
 @RequiredArgsConstructor
@@ -18,6 +17,7 @@ public class UserController {
 
     @PostMapping("save")
     public ResponseEntity<?> save(@RequestBody UserDTO userDTO) {
+        System.out.println("============================+++++++++++++++++++++++++++++++++");
         try {
             return ResponseEntity.ok(userService.saveUser(userDTO));
         } catch (Exception e) {

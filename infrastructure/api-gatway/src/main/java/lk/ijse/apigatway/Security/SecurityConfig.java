@@ -51,7 +51,7 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeExchange(exchanges -> exchanges
-                        .pathMatchers("/api/v1/auth/**").permitAll()
+                        .pathMatchers("/api/v1/user/**").permitAll()
                         .anyExchange().authenticated()
                 )
                 // ඔයාගේ custom JWT filter එක reactive filter chain එකට එකතු කරන්නේ මෙහෙමයි
