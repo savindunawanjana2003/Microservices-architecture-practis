@@ -54,7 +54,7 @@ public class SecurityConfig {
                         .pathMatchers("/api/v1/user/**").permitAll()
                         .anyExchange().authenticated()
                 )
-                // ඔයාගේ custom JWT filter එක reactive filter chain එකට එකතු කරන්නේ මෙහෙමයි
+
                 .addFilterBefore(new JwtAuthFilter(jwtUtil), SecurityWebFiltersOrder.AUTHENTICATION);
         return http.build();
     }
