@@ -1,6 +1,8 @@
 package lk.ijse.userservice.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import lk.ijse.userservice.dto.Enum.Role;
 import lombok.AllArgsConstructor;
@@ -23,6 +25,8 @@ public class User {
     private String name;
     private String password;
     private String phoneNumber;
+
+    @Enumerated(EnumType.STRING)
     private Role role;
 
     private String status;
