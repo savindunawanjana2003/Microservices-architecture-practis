@@ -1,4 +1,4 @@
-package lk.ijse.oderservice;
+package lk.ijse.vehiclesevice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

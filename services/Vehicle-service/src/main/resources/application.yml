@@ -1,6 +1,6 @@
 spring:
   application:
-    name: order-service
+    name: Vehicle-service
 
 server:
   port: 8082

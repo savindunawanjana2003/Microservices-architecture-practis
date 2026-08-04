@@ -24,6 +24,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDTO saveUser(UserDTO userDTO) {
+
+        System.out.println("===============+++++++++++++++++++++++/////++ "+userDTO.getPassword());
         if (userRepo.findById(userDTO.getId()).isPresent()) {
             throw new DuplicateException("Duplicate User Id");
 

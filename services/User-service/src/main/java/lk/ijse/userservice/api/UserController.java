@@ -19,7 +19,7 @@ public class UserController {
 
     @PostMapping("save")
     public ResponseEntity<?> save(@RequestBody UserDTO userDTO) {
-        System.out.println("============================+++++++++++++++++++++++++++++++++");
+        System.out.println("============================+++++++0000000000000)))++++++++++++++++++++++++++ "+ userDTO.getPassword());
         System.out.println(userDTO.getRole());
         try {
 

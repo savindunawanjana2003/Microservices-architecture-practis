@@ -53,11 +53,10 @@ public class AuthController {
     }
 
 
-
     @PostMapping("/registetion")
     public Mono<ResponseEntity<?>> registetion(@RequestBody UserRegistetion requestObject) {
 
-        System.out.println("//////////////////////////////////======================");
+        System.out.println("////////////////////////////////888888888888888//======================"+requestObject);
         return webClientBuilder.build()
                 .post()
                 .uri("http://localhost:8083/api/v1/user/save")
