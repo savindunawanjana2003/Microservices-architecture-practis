@@ -19,9 +19,9 @@ import java.time.LocalDateTime;
 public class User {
     @Id
     private String id;
-    private String password;
     private String email;
     private String name;
+    private String password;
     private String phoneNumber;
     private Role role;
 
