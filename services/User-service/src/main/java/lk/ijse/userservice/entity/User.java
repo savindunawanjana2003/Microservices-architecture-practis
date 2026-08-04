@@ -1,9 +1,6 @@
 package lk.ijse.userservice.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lk.ijse.userservice.dto.Enum.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,8 +18,12 @@ import java.time.LocalDateTime;
 public class User {
     @Id
     private String id;
+
+    @Column(unique = true, nullable = false)
     private String email;
     private String name;
+
+    @Column(nullable = false)
     private String password;
     private String phoneNumber;
 

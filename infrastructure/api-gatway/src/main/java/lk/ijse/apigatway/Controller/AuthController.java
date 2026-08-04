@@ -19,6 +19,10 @@ public class AuthController {
     private final JwtUtil jwtUtil;
     private final WebClient.Builder webClientBuilder;
 
+    ///----------------
+    /// Api gatway must includ only one end poind (login)
+    /// -----------------
+
     @PostMapping("/login")
     public Mono<ResponseEntity<?>> login(@RequestBody AuthRequest request) {
         System.out.println("===========================================================");
@@ -47,31 +51,32 @@ public class AuthController {
                     return Mono.just(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
                 });
     }
-//
-//    //    ====================================================================
-//    @PostMapping("/registetion")
-//    public Mono<ResponseEntity<?>> registetion(@RequestBody UserRegistetion requestObject) {
-//
-//        System.out.println("//////////////////////////////////======================");
-//        return webClientBuilder.build()
-//                .post()
-//                .uri("http://localhost:8083/api/v1/user/save")
-//                .bodyValue(requestObject)
-//                .retrieve()
-//                .toBodilessEntity()
-//                .flatMap(response -> {
-//                    if (response.getStatusCode().is2xxSuccessful()) {
-//                        return Mono.just(ResponseEntity.ok(requestObject.getRole() + " saved succsess fully"));
-//                    } else {
-//                        return Mono.just(ResponseEntity.status(HttpStatus.BAD_REQUEST).build());
-//                    }
-//                })
-//                .onErrorResume(error -> {
-//                    System.out.println("❌ WebClient Call eka fail una : " + error.getMessage());
-//                    error.printStackTrace();
-//
-//                    return Mono.just(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
-//                });
-//    }
+
+
+
+    @PostMapping("/registetion")
+    public Mono<ResponseEntity<?>> registetion(@RequestBody UserRegistetion requestObject) {
+
+        System.out.println("//////////////////////////////////======================");
+        return webClientBuilder.build()
+                .post()
+                .uri("http://localhost:8083/api/v1/user/save")
+                .bodyValue(requestObject)
+                .retrieve()
+                .toBodilessEntity()
+                .flatMap(response -> {
+                    if (response.getStatusCode().is2xxSuccessful()) {
+                        return Mono.just(ResponseEntity.ok(requestObject.getRole() + " saved succsess fully"));
+                    } else {
+                        return Mono.just(ResponseEntity.status(HttpStatus.BAD_REQUEST).build());
+                    }
+                })
+                .onErrorResume(error -> {
+                    System.out.println("❌ WebClient Call eka fail una : " + error.getMessage());
+                    error.printStackTrace();
+
+                    return Mono.just(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
+                });
+    }
 
 }
