@@ -1,6 +1,7 @@
 package lk.ijse.vehiclesevice.entity;
 
 import jakarta.persistence.*;
+//import lk.ijse.vehiclesevice.dto.Enum.Status;
 import lk.ijse.vehiclesevice.dto.Enum.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;

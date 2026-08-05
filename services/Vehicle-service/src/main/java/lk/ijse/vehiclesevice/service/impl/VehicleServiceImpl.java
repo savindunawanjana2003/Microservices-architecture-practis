@@ -1,6 +1,5 @@
 package lk.ijse.vehiclesevice.service.impl;
 
-
 import lk.ijse.vehiclesevice.dto.Enum.Status;
 import lk.ijse.vehiclesevice.dto.VehicleDto;
 import lk.ijse.vehiclesevice.dto.VehicleLogDto;
@@ -83,7 +82,7 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Override
     public VehicleLogDto logVehicleExit(String vehicleId) {
-        VehicleLog log = vehicleLogRepository.findByVehicleIdAndStatus(vehicleId, "IN_PARKING")
+        VehicleLog log = vehicleLogRepository.findByVehicleIdAndStatus(vehicleId, Status.IN_PARKING)
                 .orElseThrow(() -> new RuntimeException("No active parking log found for this vehicle!"));
 
         log.setExitTime(LocalDateTime.now());
