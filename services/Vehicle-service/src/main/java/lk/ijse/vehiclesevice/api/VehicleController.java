@@ -16,7 +16,7 @@ public class VehicleController {
 
     private final lk.ijse.vehiclesevice.service.VehicleService vehicleService;
 
-    @PostMapping
+    @PostMapping("save")
     public ResponseEntity<VehicleDto> registerVehicle(@RequestBody VehicleDto vehicleDTO) {
         return new ResponseEntity<>(vehicleService.registerVehicle(vehicleDTO), HttpStatus.CREATED);
     }

@@ -7,7 +7,7 @@ spring:
         - id: Vehicle-service
           uri: lb://Vehicle-service
           predicates:
-            - Path=/api/v1/Vehicle-service/**
+            - Path=/api/v1/vehicle/**
 
         #        - id: item-service
         #          uri: lb://item-service
