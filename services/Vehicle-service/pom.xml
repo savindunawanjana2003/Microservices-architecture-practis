@@ -11,8 +11,8 @@
     <groupId>lk.ijse</groupId>
     <artifactId>Vehicle-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Oder-service</name>
-    <description>Oder-service</description>
+    <name>Vehicle-service</name>
+    <description>Vehicle-service</description>
     <url/>
     <licenses>
         <license/>
@@ -40,6 +40,18 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <!-- Config Client (Config Server eken configurations load kara gannafa) -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+
+        <!-- MySQL Connector (MySQL connection ekata) -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
