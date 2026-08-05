@@ -13,10 +13,10 @@ spring:
           uri: https://github.com/savindunawanjana2003/Microservices-architecture-practis.git
           search-paths: config-repo
           clone-on-start: true
-          # Private Repo එකක් නිසා authentication අනිවාර්යයෙන්ම ඕනේ:
+          #due to Private Repo , must need   authenticetions
           username: savindunawanjana2003
-          password: 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
-          # Security වලට හොඳම ක්‍රමය Environment Variable එකක් දාන එක. (නැත්නම් direct token එක මෙතනට පේස්ට් කරන්න)
+          password: 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
+          # recomend ( you can use env)
 
 eureka:
   client:
