@@ -9,28 +9,28 @@ spring:
           predicates:
             - Path=/api/v1/vehicles/**
 
-        #        - id: item-service
-        #          uri: lb://item-service
-        #          predicates:
-        #            - Path=/api/v1/item/**
-#        PARKING-SPOT-SERVICE
+        - id: payment-service
+          uri: lb://payment-service
+          predicates:
+            - Path=/api/v1/payments/**
+          #        PARKING-SPOT-SERVICE
         - id: parking-spot-service
           uri: lb://parking-spot-service
           predicates:
-           - Path=/api/v1/parking/**
+            - Path=/api/v1/parking/**
 
         - id: user-service
           uri: lb://user-service
           predicates:
-           - Path=/api/v1/user/**
+            - Path=/api/v1/user/**
 
         - id: local-auth-route
           uri: forward:/
           predicates:
             - Path=/api/v1/auth/**
 
-#        ===================================s
-#    forward is very important poin this through forwoer the reqest to the Controller of Api-gatway
+  #        ===================================s
+  #    forward is very important poin this through forwoer the reqest to the Controller of Api-gatway
   # without  forward  the reqest will go to the User microservice
 #    ========================================
 
