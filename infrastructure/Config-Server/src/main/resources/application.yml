@@ -15,7 +15,7 @@ spring:
           clone-on-start: true
           #due to Private Repo , must need   authenticetions
           username: savindunawanjana2003
-          password: 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
+          password: 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
           # recomend ( you can use env)
 
 eureka:
