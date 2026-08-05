@@ -1,9 +1,13 @@
 spring:
   application:
     name: Vehicle-service
+  config:
+    import: "optional:configserver:http://localhost:8089"
 
 server:
   port: 8082
+
+
 
 eureka:
   client:
