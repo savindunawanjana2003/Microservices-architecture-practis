@@ -6,7 +6,8 @@ from app.models.parking_spot import ParkingSpot, Booking, SpotStatus
 
 parking_bp = Blueprint('parking', __name__, url_prefix='/api/v1/parking')
 
-# 0. Spot එකක් add කිරීම
+
+# 0. Spot  add
 @parking_bp.route('/spots', methods=['POST'])
 def add_spot():
     try:
@@ -147,3 +148,27 @@ def release_spot(spot_id):
     except Exception as e:
         db.session.rollback()
         return jsonify({"error": str(e)}), 400
+
+
+#  Get bookings by spot_id (this created by another back end call)
+@parking_bp.route('/bookings/spot/<spot_id>', methods=['GET'])
+def get_bookings_by_spot(spot_id):
+    try:
+        bookings = Booking.query.filter_by(spot_id=spot_id).all()
+
+        result = [
+            {
+                "bookingId": b.booking_id,
+                "userId": b.user_id,
+                "spotId": b.spot_id,
+                "vehicleId": b.vehicle_id,
+                "startTime": b.start_time.isoformat() if b.start_time else None,
+                "endTime": b.end_time.isoformat() if b.end_time else None,
+                "bookingStatus": b.booking_status
+            } for b in bookings
+        ]
+
+        return jsonify(result), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500

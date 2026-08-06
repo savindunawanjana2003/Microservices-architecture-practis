@@ -1,5 +1,7 @@
 package lk.ijse.parkingspacesevice.api;
 
+import lk.ijse.parkingspacesevice.dto.OwnerDashboardDTO;
+import lk.ijse.parkingspacesevice.dto.OwnerRevenueReportDTO;
 import lk.ijse.parkingspacesevice.dto.ParkingSpotRequestDTO;
 import lk.ijse.parkingspacesevice.dto.ParkingSpotResponseDTO;
 import lk.ijse.parkingspacesevice.service.ParkingSpotService;
@@ -11,14 +13,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/parking-spaces")
+@RequestMapping("/api/v1/parkingSpace")
 @RequiredArgsConstructor
 public class ParkingSpotController {
 
     private final ParkingSpotService service;
 
     // 1. Add New Parking Space
-    @PostMapping
+    @PostMapping("add")
     public ResponseEntity<ParkingSpotResponseDTO> addSpot(@RequestBody ParkingSpotRequestDTO dto) {
         return new ResponseEntity<>(service.addParkingSpot(dto), HttpStatus.CREATED);
     }
@@ -48,5 +50,17 @@ public class ParkingSpotController {
     @GetMapping("/owner/{ownerId}")
     public ResponseEntity<List<ParkingSpotResponseDTO>> getSpotsByOwner(@PathVariable String ownerId) {
         return ResponseEntity.ok(service.getSpotsByOwnerId(ownerId));
+    }
+
+    // 1. Owner Real-time Dashboard (Occupied/Available spots)
+    @GetMapping("/owner/{ownerId}/dashboard")
+    public ResponseEntity<OwnerDashboardDTO> getOwnerDashboard(@PathVariable String ownerId) {
+        return ResponseEntity.ok(service.getOwnerDashboard(ownerId));
+    }
+
+    // 2. Owner Revenue & Booking History Report
+    @GetMapping("/owner/{ownerId}/revenue-report")
+    public ResponseEntity<OwnerRevenueReportDTO> getOwnerRevenueReport(@PathVariable String ownerId) {
+        return ResponseEntity.ok(service.getOwnerRevenueReport(ownerId));
     }
 }

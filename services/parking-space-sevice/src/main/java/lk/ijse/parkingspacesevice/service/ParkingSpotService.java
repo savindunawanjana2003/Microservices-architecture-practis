@@ -2,6 +2,8 @@ package lk.ijse.parkingspacesevice.service;
 
 
 
+import lk.ijse.parkingspacesevice.dto.OwnerDashboardDTO;
+import lk.ijse.parkingspacesevice.dto.OwnerRevenueReportDTO;
 import lk.ijse.parkingspacesevice.dto.ParkingSpotRequestDTO;
 import lk.ijse.parkingspacesevice.dto.ParkingSpotResponseDTO;
 
@@ -13,4 +15,8 @@ public interface ParkingSpotService {
     void deleteParkingSpot(String spotId);
     ParkingSpotResponseDTO getParkingSpotById(String spotId);
     List<ParkingSpotResponseDTO> getSpotsByOwnerId(String ownerId);
+    OwnerDashboardDTO getOwnerDashboard(String ownerId);
+    OwnerRevenueReportDTO getOwnerRevenueReport(String ownerId);
+
+
 }

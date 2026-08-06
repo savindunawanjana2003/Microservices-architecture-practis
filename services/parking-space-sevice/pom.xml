@@ -72,6 +72,14 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- communicate for each microservicses  need this dependansy -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+
     </dependencies>
 
     <!-- Spring Cloud Dependencies Management -->
