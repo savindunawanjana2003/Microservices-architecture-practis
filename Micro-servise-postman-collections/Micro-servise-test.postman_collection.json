@@ -1,0 +1,3099 @@
+{
+	"info": {
+		"_postman_id": "b7df5ffd-1321-4513-9618-b81c20daae0b",
+		"name": "Micro-servise-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49876939",
+		"_collection_link": "https://savindunawanjana08-4969074.postman.co/workspace/savindu-nawanjana's-Workspace~7e759d1e-dd96-4269-8b63-20e4c87a3051/collection/49876939-b7df5ffd-1321-4513-9618-b81c20daae0b?action=share&source=collection_link&creator=49876939"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "save-User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzc0AxMjEyZXhhbXBsc2UuY29tIiwiaWF0IjoxNzg1ODIxNTc5LCJleHAiOjE3ODU4MjUxNzl9.WlGWmw9a8nZmcH9u_7W4_d1QPyGjpjdyk0d0dM16FKc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n  \"id\": \"USR-006\",\n  \"email\": \"ss88@gmail.com\",\n  \"name\": \"Silva44s\",\n  \"password\":\"1234\",  \n  \"phoneNumber\": \"0704430588\",\n  \"role\": \"OWNER\",\n  \"status\": \"ACTIVE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/auth/registetion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"registetion"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "succsess",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzc0AxMjEyZXhhbXBsc2UuY29tIiwiaWF0IjoxNzg1ODIxNTc5LCJleHAiOjE3ODU4MjUxNzl9.WlGWmw9a8nZmcH9u_7W4_d1QPyGjpjdyk0d0dM16FKc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\n{\n  \"id\": \"USR-006\",\n  \"email\": \"ss88@gmail.com\",\n  \"name\": \"Silva44s\",\n  \"password\":\"1234\",  \n  \"phoneNumber\": \"0704430588\",\n  \"role\": \"OWNER\",\n  \"status\": \"ACTIVE\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/auth/registetion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"registetion"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Aug 2026 07:59:38 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "OWNER saved succsess fully"
+						}
+					]
+				},
+				{
+					"name": "login-User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n  \"email\": \"ss08@gmail.com\",\n  \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Succses",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\n{\n  \"email\": \"user@gmail.com\",\n  \"password\": \"2003\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "155"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Jul 2026 21:04:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTc4NDQ5NTA4MiwiZXhwIjoxNzg0NDk4NjgyfQ.Oh3tfc9AEUONOe0kQnUhFl7qJBjBWVSoNR4xl6-_QCc\"\n}"
+						},
+						{
+							"name": "sucsess",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\n{\n  \"email\": \"ss@1212examplse.com\",\n  \"password\": \"1123467Savindu\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "161"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Aug 2026 05:32:59 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzc0AxMjEyZXhhbXBsc2UuY29tIiwiaWF0IjoxNzg1ODIxNTc5LCJleHAiOjE3ODU4MjUxNzl9.WlGWmw9a8nZmcH9u_7W4_d1QPyGjpjdyk0d0dM16FKc\"\n}"
+						},
+						{
+							"name": "Succesess",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\n{\n  \"email\": \"ss88@gmail.com\",\n  \"password\": \"1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "155"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Aug 2026 08:01:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczg4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTgzMDQ5MCwiZXhwIjoxNzg1ODM0MDkwfQ.gif7ww4VAwz_gAz7P2gePzNU6lygFhBb6xKizk1oVkg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getProfailDeatiles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzc0AxMjEyZXhhbXBsc2UuY29tIiwiaWF0IjoxNzg1ODIxNTc5LCJleHAiOjE3ODU4MjUxNzl9.WlGWmw9a8nZmcH9u_7W4_d1QPyGjpjdyk0d0dM16FKc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/ProfailDeatiles?userEmail=ss88@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"ProfailDeatiles"
+							],
+							"query": [
+								{
+									"key": "userEmail",
+									"value": "ss88@gmail.com"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczg4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTgzMDY3OCwiZXhwIjoxNzg1ODM0Mjc4fQ.H_6vjo7gQjFvrZykVQnL2CQNadZAOjnFD2dAxTCHE3E",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/user/ProfailDeatiles?userEmail=ss88@gmail.com",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"ProfailDeatiles"
+									],
+									"query": [
+										{
+											"key": "userEmail",
+											"value": "ss88@gmail.com"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 04 Aug 2026 08:05:06 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"USR-006\",\n    \"email\": \"ss88@gmail.com\",\n    \"name\": \"Silva44s\",\n    \"password\": \"1234\",\n    \"phoneNumber\": \"0704430588\",\n    \"role\": \"OWNER\",\n    \"status\": \"ACTIVE\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update-user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczg4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTgzMDY3OCwiZXhwIjoxNzg1ODM0Mjc4fQ.H_6vjo7gQjFvrZykVQnL2CQNadZAOjnFD2dAxTCHE3E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"USR-004\",\n  \"email\": \"er04@gmail.com\",\n  \"name\": \"Silvas5557\",\n  \"password\": \"123\",\n  \"phoneNumber\": \"0701230504\",\n  \"status\": \"ACTIVE\",\n  \"role\": \"OWNER\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Succses",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczg4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTgzMDY3OCwiZXhwIjoxNzg1ODM0Mjc4fQ.H_6vjo7gQjFvrZykVQnL2CQNadZAOjnFD2dAxTCHE3E",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"USR-004\",\n  \"email\": \"er04@gmail.com\",\n  \"name\": \"Silvas5557\",\n  \"password\": \"123\",\n  \"phoneNumber\": \"0701230504\",\n  \"status\": \"ACTIVE\",\n  \"role\": \"OWNER\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/user/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 04 Aug 2026 08:27:54 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "User updated successfully!"
+						}
+					]
+				},
+				{
+					"name": "get-All",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Succsess",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczg4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTgzMDY3OCwiZXhwIjoxNzg1ODM0Mjc4fQ.H_6vjo7gQjFvrZykVQnL2CQNadZAOjnFD2dAxTCHE3E",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/user/getAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"getAll"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 04 Aug 2026 08:29:53 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"USR-004\",\n        \"email\": \"er04@gmail.com\",\n        \"name\": \"Silvas5557\",\n        \"password\": \"123\",\n        \"phoneNumber\": \"0701230504\",\n        \"role\": \"OWNER\",\n        \"status\": \"ACTIVE\"\n    },\n    {\n        \"id\": \"USR-005\",\n        \"email\": \"ss4@gmail.com\",\n        \"name\": \"Silvas\",\n        \"password\": null,\n        \"phoneNumber\": \"0701230588\",\n        \"role\": \"OWNER\",\n        \"status\": \"ACTIVE\"\n    },\n    {\n        \"id\": \"USR-006\",\n        \"email\": \"ss88@gmail.com\",\n        \"name\": \"Silva44s\",\n        \"password\": \"1234\",\n        \"phoneNumber\": \"0704430588\",\n        \"role\": \"OWNER\",\n        \"status\": \"ACTIVE\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Vehicle",
+			"item": [
+				{
+					"name": "register-vehicle",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTkxNjQzNSwiZXhwIjoxNzg1OTIwMDM1fQ.RhdKRVfqBZlA4N76ih7UMqMv2wqQjTKplH-rZrOvnwU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"licensePlateNumber\": \"CAB-1234\",\n  \"model\": \"Toyota Prius\",\n  \"color\": \"White\",\n  \"vehicleType\": \"CAR\",\n  \"userId\": \"user-uuid-001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/vehicles/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"vehicles",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201 stetus",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTkxNjQzNSwiZXhwIjoxNzg1OTIwMDM1fQ.RhdKRVfqBZlA4N76ih7UMqMv2wqQjTKplH-rZrOvnwU",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"licensePlateNumber\": \"CAB-1234\",\n  \"model\": \"Toyota Prius\",\n  \"color\": \"White\",\n  \"vehicleType\": \"CAR\",\n  \"userId\": \"user-uuid-001\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/vehicles/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"vehicles",
+										"save"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2026 07:55:10 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"47c04df8-9a71-4a8d-be7c-b471e7f35e18\",\n    \"licensePlateNumber\": \"CAB-1234\",\n    \"model\": \"Toyota Prius\",\n    \"color\": \"White\",\n    \"vehicleType\": \"CAR\",\n    \"userId\": \"user-uuid-001\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getVehicles By UserId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTkxNjQzNSwiZXhwIjoxNzg1OTIwMDM1fQ.RhdKRVfqBZlA4N76ih7UMqMv2wqQjTKplH-rZrOvnwU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/vehicles/user/user-uuid-001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"vehicles",
+								"user",
+								"user-uuid-001"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getVehicles By UserId",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTkxNjQzNSwiZXhwIjoxNzg1OTIwMDM1fQ.RhdKRVfqBZlA4N76ih7UMqMv2wqQjTKplH-rZrOvnwU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/vehicles/user/user-uuid-001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"vehicles",
+										"user",
+										"user-uuid-001"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2026 08:24:48 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"47c04df8-9a71-4a8d-be7c-b471e7f35e18\",\n        \"licensePlateNumber\": \"CAB-1234\",\n        \"model\": \"Toyota Prius\",\n        \"color\": \"White\",\n        \"vehicleType\": \"CAR\",\n        \"userId\": \"user-uuid-001\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Simulated Entry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTkxNjQzNSwiZXhwIjoxNzg1OTIwMDM1fQ.RhdKRVfqBZlA4N76ih7UMqMv2wqQjTKplH-rZrOvnwU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"logId\": \"log-001\",\n  \"vehicleId\": \"123e4567-e89b-12d3-a456-426614174000\",\n  \"parkingSpotId\": \"SPOT-A1\",\n  \"entryTime\": \"2026-08-05T14:00:00\",\n  \"exitTime\": null,\n  \"status\": \"IN_PARKING\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/vehicles/47c04df8-9a71-4a8d-be7c-b471e7f35e18/entry?parkingSpotId=SPOT-A1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"vehicles",
+								"47c04df8-9a71-4a8d-be7c-b471e7f35e18",
+								"entry"
+							],
+							"query": [
+								{
+									"key": "parkingSpotId",
+									"value": "SPOT-A1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Simulated Entry",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTkxNjQzNSwiZXhwIjoxNzg1OTIwMDM1fQ.RhdKRVfqBZlA4N76ih7UMqMv2wqQjTKplH-rZrOvnwU",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"logId\": \"log-001\",\n  \"vehicleId\": \"123e4567-e89b-12d3-a456-426614174000\",\n  \"parkingSpotId\": \"SPOT-A1\",\n  \"entryTime\": \"2026-08-05T14:00:00\",\n  \"exitTime\": null,\n  \"status\": \"IN_PARKING\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/vehicles/47c04df8-9a71-4a8d-be7c-b471e7f35e18/entry?parkingSpotId=SPOT-A1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"vehicles",
+										"47c04df8-9a71-4a8d-be7c-b471e7f35e18",
+										"entry"
+									],
+									"query": [
+										{
+											"key": "parkingSpotId",
+											"value": "SPOT-A1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2026 08:33:06 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"logId\": \"3cd79353-687b-422c-9b55-0250c946ce98\",\n    \"vehicleId\": \"47c04df8-9a71-4a8d-be7c-b471e7f35e18\",\n    \"parkingSpotId\": \"SPOT-A1\",\n    \"entryTime\": \"2026-08-05T14:03:06.767765496\",\n    \"exitTime\": null,\n    \"status\": \"IN_PARKING\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Simulated Exit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTkyNjk0NywiZXhwIjoxNzg1OTMwNTQ3fQ.er1pWm385oMMTJKZyanK_3W2D59qJj3-C271OYiNJxU",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"logId\": \"log-001\",\n  \"vehicleId\": \"123e4567-e89b-12d3-a456-426614174000\",\n  \"parkingSpotId\": \"SPOT-A1\",\n  \"entryTime\": \"2026-08-05T14:00:00\",\n  \"exitTime\": \"2026-08-05T15:30:00\",\n  \"status\": \"EXITED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/vehicles/47c04df8-9a71-4a8d-be7c-b471e7f35e18/exit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"vehicles",
+								"47c04df8-9a71-4a8d-be7c-b471e7f35e18",
+								"exit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Simulated Exit",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTkyNzM4OCwiZXhwIjoxNzg1OTMwOTg4fQ._apaR0xUeXoDezPezZOCvRsN5xegz-g-UX_4Tf8hEsw",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"logId\": \"log-001\",\n  \"vehicleId\": \"123e4567-e89b-12d3-a456-426614174000\",\n  \"parkingSpotId\": \"SPOT-A1\",\n  \"entryTime\": \"2026-08-05T14:00:00\",\n  \"exitTime\": \"2026-08-05T15:30:00\",\n  \"status\": \"EXITED\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/vehicles/47c04df8-9a71-4a8d-be7c-b471e7f35e18/exit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"vehicles",
+										"47c04df8-9a71-4a8d-be7c-b471e7f35e18",
+										"exit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2026 10:57:10 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"logId\": \"af238009-32a0-4b3b-a9df-b2fd813b3740\",\n    \"vehicleId\": \"47c04df8-9a71-4a8d-be7c-b471e7f35e18\",\n    \"parkingSpotId\": \"SPOT-A1\",\n    \"entryTime\": \"2026-08-05T16:26:51.677225\",\n    \"exitTime\": \"2026-08-05T16:27:10.243397031\",\n    \"status\": \"EXITED\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get-vehicle-by-id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTkyODc5MiwiZXhwIjoxNzg1OTMyMzkyfQ.TqldiYONjxMh5iyAq_TJ6iIt2jm_fYiZOwATsnvNoZM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/api/v1/vehicles/3487ec6b-1f22-47ef-ac49-c1b899ae0885",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"vehicles",
+								"3487ec6b-1f22-47ef-ac49-c1b899ae0885"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTkyODc5MiwiZXhwIjoxNzg1OTMyMzkyfQ.TqldiYONjxMh5iyAq_TJ6iIt2jm_fYiZOwATsnvNoZM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8082/api/v1/vehicles/3487ec6b-1f22-47ef-ac49-c1b899ae0885",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"v1",
+										"vehicles",
+										"3487ec6b-1f22-47ef-ac49-c1b899ae0885"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2026 11:20:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"3487ec6b-1f22-47ef-ac49-c1b899ae0885\",\n    \"licensePlateNumber\": \"CAB-1234\",\n    \"model\": \"Toyota Prius\",\n    \"color\": \"White\",\n    \"vehicleType\": \"CAR\",\n    \"userId\": \"user-uuid-001\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update vehicle deatiles",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTkyODc5MiwiZXhwIjoxNzg1OTMyMzkyfQ.TqldiYONjxMh5iyAq_TJ6iIt2jm_fYiZOwATsnvNoZM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"model\": \"Toyota Prius Prime\",\n  \"color\": \"Matte Black\",\n  \"vehicleType\": \"CAR\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/v1/vehicles/3487ec6b-1f22-47ef-ac49-c1b899ae0885",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"vehicles",
+								"3487ec6b-1f22-47ef-ac49-c1b899ae0885"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 ok",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTkyODc5MiwiZXhwIjoxNzg1OTMyMzkyfQ.TqldiYONjxMh5iyAq_TJ6iIt2jm_fYiZOwATsnvNoZM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"model\": \"Toyota Prius Prime\",\n  \"color\": \"Matte Black\",\n  \"vehicleType\": \"CAR\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/v1/vehicles/3487ec6b-1f22-47ef-ac49-c1b899ae0885",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"v1",
+										"vehicles",
+										"3487ec6b-1f22-47ef-ac49-c1b899ae0885"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2026 11:23:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"3487ec6b-1f22-47ef-ac49-c1b899ae0885\",\n    \"licensePlateNumber\": \"CAB-1234\",\n    \"model\": \"Toyota Prius Prime\",\n    \"color\": \"Matte Black\",\n    \"vehicleType\": \"CAR\",\n    \"userId\": \"user-uuid-001\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get-vehicle logs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTkyODc5MiwiZXhwIjoxNzg1OTMyMzkyfQ.TqldiYONjxMh5iyAq_TJ6iIt2jm_fYiZOwATsnvNoZM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/v1/vehicles/47c04df8-9a71-4a8d-be7c-b471e7f35e18/logs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"vehicles",
+								"47c04df8-9a71-4a8d-be7c-b471e7f35e18",
+								"logs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTkyODc5MiwiZXhwIjoxNzg1OTMyMzkyfQ.TqldiYONjxMh5iyAq_TJ6iIt2jm_fYiZOwATsnvNoZM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/v1/vehicles/47c04df8-9a71-4a8d-be7c-b471e7f35e18/logs",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"v1",
+										"vehicles",
+										"47c04df8-9a71-4a8d-be7c-b471e7f35e18",
+										"logs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2026 11:41:44 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"logId\": \"78b2f6c0-5a3b-42d6-8713-47755f3863cb\",\n        \"vehicleId\": \"47c04df8-9a71-4a8d-be7c-b471e7f35e18\",\n        \"parkingSpotId\": \"SPOT-A1\",\n        \"entryTime\": \"2026-08-05T17:09:58.851133\",\n        \"exitTime\": \"2026-08-05T17:10:02.698888\",\n        \"status\": \"EXITED\"\n    },\n    {\n        \"logId\": \"aa47e7b3-f640-4515-85e6-ab586ef19bfe\",\n        \"vehicleId\": \"47c04df8-9a71-4a8d-be7c-b471e7f35e18\",\n        \"parkingSpotId\": \"SPOT-A1\",\n        \"entryTime\": \"2026-08-05T17:07:51.287767\",\n        \"exitTime\": \"2026-08-05T17:08:07.369941\",\n        \"status\": \"EXITED\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Spot",
+			"item": [
+				{
+					"name": "add spot",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTk2NzQxNSwiZXhwIjoxNzg1OTcxMDE1fQ.8htLqUTU1RQIZnY-HBFP22zoa7By-TpFd15YbZdSmWQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"locationName\": \"Galle-Fort\",\n  \"allowedVehicleType\": \"CAR\",\n  \"pricePerHour\": 150.0,\n  \"status\": \"AVAILABLE\",\n  \"ownerId\": \"OWNER_001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/parking/spots",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parking",
+								"spots"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201 created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTk2NzQxNSwiZXhwIjoxNzg1OTcxMDE1fQ.8htLqUTU1RQIZnY-HBFP22zoa7By-TpFd15YbZdSmWQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"locationName\": \"Galle-Fort\",\n  \"allowedVehicleType\": \"CAR\",\n  \"pricePerHour\": 150.0,\n  \"status\": \"AVAILABLE\",\n  \"ownerId\": \"OWNER_001\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/parking/spots",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"parking",
+										"spots"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.8 Python/3.12.3"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2026 22:10:57 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "194"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"allowedVehicleType\": \"CAR\",\n    \"locationName\": \"Galle-Fort\",\n    \"ownerId\": \"OWNER_001\",\n    \"pricePerHour\": 150,\n    \"spotId\": \"1d12cb23-39eb-44ec-829c-560860f0505f\",\n    \"status\": \"AVAILABLE\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Reserve Parking",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTk2NzQxNSwiZXhwIjoxNzg1OTcxMDE1fQ.8htLqUTU1RQIZnY-HBFP22zoa7By-TpFd15YbZdSmWQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/parking/reserve?userId=USER_123&spotId=1d12cb23-39eb-44ec-829c-560860f0505f&vehicleId=CAB-1234",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parking",
+								"reserve"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "USER_123"
+								},
+								{
+									"key": "spotId",
+									"value": "1d12cb23-39eb-44ec-829c-560860f0505f"
+								},
+								{
+									"key": "vehicleId",
+									"value": "CAB-1234"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Reserve Parking",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTk2NzQxNSwiZXhwIjoxNzg1OTcxMDE1fQ.8htLqUTU1RQIZnY-HBFP22zoa7By-TpFd15YbZdSmWQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/parking/reserve?userId=USER_123&spotId=1d12cb23-39eb-44ec-829c-560860f0505f&vehicleId=CAB-1234",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"parking",
+										"reserve"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "USER_123"
+										},
+										{
+											"key": "spotId",
+											"value": "1d12cb23-39eb-44ec-829c-560860f0505f"
+										},
+										{
+											"key": "vehicleId",
+											"value": "CAB-1234"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.8 Python/3.12.3"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2026 22:28:50 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Spot is not available for booking!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Release Parking",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTk2NzQxNSwiZXhwIjoxNzg1OTcxMDE1fQ.8htLqUTU1RQIZnY-HBFP22zoa7By-TpFd15YbZdSmWQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/parking/spots/1d12cb23-39eb-44ec-829c-560860f0505f/release",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parking",
+								"spots",
+								"1d12cb23-39eb-44ec-829c-560860f0505f",
+								"release"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "release parking",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTk2NzQxNSwiZXhwIjoxNzg1OTcxMDE1fQ.8htLqUTU1RQIZnY-HBFP22zoa7By-TpFd15YbZdSmWQ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/parking/spots/1d12cb23-39eb-44ec-829c-560860f0505f/release",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"parking",
+										"spots",
+										"1d12cb23-39eb-44ec-829c-560860f0505f",
+										"release"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.8 Python/3.12.3"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2026 22:33:22 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "266"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"bookingId\": \"353d6494-719f-42fd-9529-03b556b2ab04\",\n    \"bookingStatus\": \"RELEASED\",\n    \"endTime\": \"2026-08-05T22:33:23\",\n    \"spotId\": \"1d12cb23-39eb-44ec-829c-560860f0505f\",\n    \"startTime\": \"2026-08-05T22:33:17\",\n    \"userId\": \"USER_123\",\n    \"vehicleId\": \"CAB-1234\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Filter Spots",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTk2NzQxNSwiZXhwIjoxNzg1OTcxMDE1fQ.8htLqUTU1RQIZnY-HBFP22zoa7By-TpFd15YbZdSmWQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/parking/spots/search?location=Galle-Fort&vehicleType=CAR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parking",
+								"spots",
+								"search"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "Galle-Fort"
+								},
+								{
+									"key": "vehicleType",
+									"value": "CAR"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Filter",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTk2NzQxNSwiZXhwIjoxNzg1OTcxMDE1fQ.8htLqUTU1RQIZnY-HBFP22zoa7By-TpFd15YbZdSmWQ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/parking/spots/search?location=Galle-Fort&vehicleType=CAR",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"parking",
+										"spots",
+										"search"
+									],
+									"query": [
+										{
+											"key": "location",
+											"value": "Galle-Fort"
+										},
+										{
+											"key": "vehicleType",
+											"value": "CAR"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.8 Python/3.12.3"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2026 22:35:30 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "425"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"allowedVehicleType\": \"CAR\",\n        \"locationName\": \"Galle-Fort\",\n        \"ownerId\": \"OWNER_001\",\n        \"pricePerHour\": 150,\n        \"spotId\": \"1d12cb23-39eb-44ec-829c-560860f0505f\",\n        \"status\": \"AVAILABLE\"\n    },\n    {\n        \"allowedVehicleType\": \"CAR\",\n        \"locationName\": \"Galle-Fort\",\n        \"ownerId\": \"OWNER_001\",\n        \"pricePerHour\": 150,\n        \"spotId\": \"ec0d5913-350b-4e94-a4d8-d644fceae6ef\",\n        \"status\": \"AVAILABLE\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "payments",
+			"item": [
+				{
+					"name": "process-payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"USR-001\",\n  \"parkingSpotId\": \"1d12cb23-39eb-44ec-829c-560860f0505f\",\n  \"amount\": 450.00,\n  \"paymentMethod\": \"CARD\",\n  \"cardNumber\": \"4532758912345678\",\n  \"expiryDate\": \"12/28\",\n  \"cvv\": \"321\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/payments/process",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"process"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201 created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTk3NDQxNCwiZXhwIjoxNzg1OTc4MDE0fQ.ny51jTuaAjBAKT0NqSnHMdN8ToH5BMye9ymJM7FJgg4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"bookingId\": \"BKN-001\",\n  \"userId\": \"USR-001\",\n  \"parkingSpotId\": \"1d12cb23-39eb-44ec-829c-560860f0505f\",\n  \"amount\": 450.00,\n  \"paymentMethod\": \"CARD\",\n  \"cardNumber\": \"4532758912345678\",\n  \"expiryDate\": \"12/28\",\n  \"cvv\": \"321\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/payments/process",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"payments",
+										"process"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 06 Aug 2026 00:03:14 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"receiptId\": \"RCP-D94E34F0\",\n    \"paymentId\": \"d94e34f0-5c79-4dd2-be64-733a81ce9da2\",\n    \"bookingId\": \"BKN-001\",\n    \"userId\": \"USR-001\",\n    \"amountPaid\": 450,\n    \"status\": \"SUCCESS\",\n    \"timestamp\": \"2026-08-06T05:33:14.544727516\",\n    \"transactionReference\": \"TXN-896C85C9\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Generate Digital Receipt",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTk3NDQxNCwiZXhwIjoxNzg1OTc4MDE0fQ.ny51jTuaAjBAKT0NqSnHMdN8ToH5BMye9ymJM7FJgg4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/payments/receipt/d94e34f0-5c79-4dd2-be64-733a81ce9da2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"receipt",
+								"d94e34f0-5c79-4dd2-be64-733a81ce9da2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NTk3NDQxNCwiZXhwIjoxNzg1OTc4MDE0fQ.ny51jTuaAjBAKT0NqSnHMdN8ToH5BMye9ymJM7FJgg4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/payments/receipt/d94e34f0-5c79-4dd2-be64-733a81ce9da2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"payments",
+										"receipt",
+										"d94e34f0-5c79-4dd2-be64-733a81ce9da2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 06 Aug 2026 00:10:19 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"receiptId\": \"RCP-D94E34F0\",\n    \"paymentId\": \"d94e34f0-5c79-4dd2-be64-733a81ce9da2\",\n    \"bookingId\": \"BKN-001\",\n    \"userId\": \"USR-001\",\n    \"amountPaid\": 450,\n    \"status\": \"SUCCESS\",\n    \"timestamp\": \"2026-08-06T05:33:14.544728\",\n    \"transactionReference\": \"TXN-896C85C9\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "parking-sapace",
+			"item": [
+				{
+					"name": "Add Parking Space",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NjAyMzk3OSwiZXhwIjoxNzg2MDI3NTc5fQ.lM89TbMySghs9OhvFTKHqr5ZrfPZIU8rDKGcdFYRaYc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ownerId\": \"USR-001\",\n  \"title\": \"Galle Face Green Parking Zone A\",\n  \"location\": \"Colombo 03\",\n  \"totalSpots\": 20,\n  \"pricePerHour\": 150.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/parkingSpace/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parkingSpace",
+								"add"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201 created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NjAyMzk3OSwiZXhwIjoxNzg2MDI3NTc5fQ.lM89TbMySghs9OhvFTKHqr5ZrfPZIU8rDKGcdFYRaYc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ownerId\": \"USR-001\",\n  \"title\": \"Galle Face Green Parking Zone A\",\n  \"location\": \"Colombo 03\",\n  \"totalSpots\": 20,\n  \"pricePerHour\": 150.00\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/parkingSpace/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"parkingSpace",
+										"add"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 06 Aug 2026 13:49:08 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"spotId\": \"d257cf7d-5344-428a-ba9f-93952a8eb579\",\n    \"ownerId\": \"USR-001\",\n    \"title\": \"Galle Face Green Parking Zone A\",\n    \"location\": \"Colombo 03\",\n    \"totalSpots\": 20,\n    \"availableSpots\": 20,\n    \"pricePerHour\": 150,\n    \"status\": \"ACTIVE\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Parking Space",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NjAyMzk3OSwiZXhwIjoxNzg2MDI3NTc5fQ.lM89TbMySghs9OhvFTKHqr5ZrfPZIU8rDKGcdFYRaYc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ownerId\": \"USR-001\",\n  \"title\": \"Galle Face Premium Parking Zone A\",\n  \"location\": \"Colombo 03\",\n  \"totalSpots\": 25,\n  \"pricePerHour\": 200.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/parkingSpace/d257cf7d-5344-428a-ba9f-93952a8eb579",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parkingSpace",
+								"d257cf7d-5344-428a-ba9f-93952a8eb579"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 ok",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NjAyMzk3OSwiZXhwIjoxNzg2MDI3NTc5fQ.lM89TbMySghs9OhvFTKHqr5ZrfPZIU8rDKGcdFYRaYc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ownerId\": \"USR-001\",\n  \"title\": \"Galle Face Premium Parking Zone A\",\n  \"location\": \"Colombo 03\",\n  \"totalSpots\": 25,\n  \"pricePerHour\": 200.00\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/parkingSpace/d257cf7d-5344-428a-ba9f-93952a8eb579",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"parkingSpace",
+										"d257cf7d-5344-428a-ba9f-93952a8eb579"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 06 Aug 2026 13:53:34 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"spotId\": \"d257cf7d-5344-428a-ba9f-93952a8eb579\",\n    \"ownerId\": \"USR-001\",\n    \"title\": \"Galle Face Premium Parking Zone A\",\n    \"location\": \"Colombo 03\",\n    \"totalSpots\": 25,\n    \"availableSpots\": 20,\n    \"pricePerHour\": 200,\n    \"status\": \"ACTIVE\"\n}"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NjAyMzk3OSwiZXhwIjoxNzg2MDI3NTc5fQ.lM89TbMySghs9OhvFTKHqr5ZrfPZIU8rDKGcdFYRaYc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/parkingSpace/d257cf7d-5344-428a-ba9f-93952a8eb579",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parkingSpace",
+								"d257cf7d-5344-428a-ba9f-93952a8eb579"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 ok",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NjAyMzk3OSwiZXhwIjoxNzg2MDI3NTc5fQ.lM89TbMySghs9OhvFTKHqr5ZrfPZIU8rDKGcdFYRaYc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/parkingSpace/d257cf7d-5344-428a-ba9f-93952a8eb579",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"parkingSpace",
+										"d257cf7d-5344-428a-ba9f-93952a8eb579"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 06 Aug 2026 13:55:40 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Parking Space deleted successfully!"
+						}
+					]
+				},
+				{
+					"name": "get by owner id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NjAyMzk3OSwiZXhwIjoxNzg2MDI3NTc5fQ.lM89TbMySghs9OhvFTKHqr5ZrfPZIU8rDKGcdFYRaYc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/parkingSpace/owner/USR-001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parkingSpace",
+								"owner",
+								"USR-001"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NjAyMzk3OSwiZXhwIjoxNzg2MDI3NTc5fQ.lM89TbMySghs9OhvFTKHqr5ZrfPZIU8rDKGcdFYRaYc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/parkingSpace/owner/USR-001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"parkingSpace",
+										"owner",
+										"USR-001"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 06 Aug 2026 13:58:59 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"spotId\": \"678dc381-a2ec-42ac-af27-e1d268e7c864\",\n        \"ownerId\": \"USR-001\",\n        \"title\": \"Galle Face Green Parking Zone A\",\n        \"location\": \"Colombo 03\",\n        \"totalSpots\": 20,\n        \"availableSpots\": 20,\n        \"pricePerHour\": 150,\n        \"status\": \"ACTIVE\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Dashboard",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "200 ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NjAyODE4MSwiZXhwIjoxNzg2MDMxNzgxfQ.qn4JeULMc6aAgfiQvrN6P4I7TyzO6VEdrDMXP4pfR4M",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/parkingSpace/owner/USR-001/dashboard",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"parkingSpace",
+										"owner",
+										"USR-001",
+										"dashboard"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 06 Aug 2026 14:57:17 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ownerId\": \"USR-001\",\n    \"totalZones\": 1,\n    \"totalCapacity\": 20,\n    \"totalAvailableSpots\": 20,\n    \"totalOccupiedSpots\": 0,\n    \"zones\": [\n        {\n            \"spotId\": \"678dc381-a2ec-42ac-af27-e1d268e7c864\",\n            \"ownerId\": \"USR-001\",\n            \"title\": \"Galle Face Green Parking Zone A\",\n            \"location\": \"Colombo 03\",\n            \"totalSpots\": 20,\n            \"availableSpots\": 20,\n            \"pricePerHour\": 150,\n            \"status\": \"ACTIVE\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "RevenueAndHistory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NjAyODE4MSwiZXhwIjoxNzg2MDMxNzgxfQ.qn4JeULMc6aAgfiQvrN6P4I7TyzO6VEdrDMXP4pfR4M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/parkingSpace/owner/USR-001/revenue-report",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parkingSpace",
+								"owner",
+								"USR-001",
+								"revenue-report"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzczA4QGdtYWlsLmNvbSIsImlhdCI6MTc4NjAyODE4MSwiZXhwIjoxNzg2MDMxNzgxfQ.qn4JeULMc6aAgfiQvrN6P4I7TyzO6VEdrDMXP4pfR4M",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/parkingSpace/owner/USR-001/revenue-report",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"parkingSpace",
+										"owner",
+										"USR-001",
+										"revenue-report"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 06 Aug 2026 15:15:44 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ownerId\": \"USR-001\",\n    \"totalEarnings\": 0,\n    \"totalBookingsCount\": 0,\n    \"bookingHistory\": []\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
