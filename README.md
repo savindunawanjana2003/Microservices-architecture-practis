@@ -7,7 +7,6 @@ A distributed, polyglot microservices-based parking spot management and booking 
 
 ## 📐 System Architecture Overview
 
-```mermaid
 graph TD
     UI[Client / Postman] -->|HTTP Requests| Eureka[Eureka Service Discovery - Port: 8761]
     
