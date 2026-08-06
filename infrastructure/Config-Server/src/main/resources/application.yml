@@ -14,8 +14,8 @@ spring:
           search-paths: config-repo
           clone-on-start: true
           #due to Private Repo , must need   authenticetions
-          username: savindunawanjana2003
-          password: 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
+#          username:##########
+#          password: ##########
           # recomend ( you can use env)
 
 eureka:

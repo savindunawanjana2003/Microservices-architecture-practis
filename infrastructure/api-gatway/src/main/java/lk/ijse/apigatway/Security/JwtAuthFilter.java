@@ -47,3 +47,12 @@ public class JwtAuthFilter implements WebFilter {
         return chain.filter(exchange);
     }
 }
+
+//  this is a very  interesting part  this file throught we have created a new  filter for the spring sequryty filter chain after the create  new filter
+//  end of the code we have added  the over custermais  new  above filter to the spring sequryty filter chain
+
+// in this prosess check the reqest  heder  like bello things=>
+
+//                     is includ ->   Bearer key word
+// actualy this is a nomal word if you wont  to cheng this wthout problam  we can chenge this  but  now all the time   the reqest  must includ  new updated word in the heder
+//insted of Bearer ok shall we move next

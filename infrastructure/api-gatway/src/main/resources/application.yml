@@ -34,6 +34,12 @@ spring:
           predicates:
             - Path=/api/v1/parkingSpace/**
 
+#          when come the reqest to the back end, firstly come that  in this place after that check the is avelable  relavent path
+# if avelable relavet path  then  sent the reqest  to the relavent backend as above includ
+
+#  but firstly the reqest face to the soring  sequrity   after sequryty prosess, now can move to th next step
+
+
   #        ===================================s
   #    forward is very important poin this through forwoer the reqest to the Controller of Api-gatway
   # without  forward  the reqest will go to the User microservice
